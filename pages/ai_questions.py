@@ -83,6 +83,7 @@ def show():
         Theme: {theme} \n
         Below each question, provide four possible answers with only one correct answer.
         Below, provide the correct answer.
+        Below, indicates the theme
         Below, provide a reasoned justification for why it is valid. If you have a reference source, it is better. Do not invent anything; if you do not know the justification, indicate it.
         show me everything in Spanish
         """
