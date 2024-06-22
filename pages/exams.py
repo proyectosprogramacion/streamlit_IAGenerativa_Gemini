@@ -65,7 +65,7 @@ def show():
     with tab1:
         st.header("Preguntas Aleatorias")
         df_random = df.sample(frac=1).reset_index(drop=True)  # Shuffle the DataFrame
-        show_questions(df_random)
+        show_questions(df_random, "random")
 
     with tab2:
         st.header("Preguntas por Temática")
@@ -87,12 +87,12 @@ def show():
             df_theme = pd.DataFrame(rows_theme)
 
             if not df_theme.empty:
-                show_questions(df_theme)
+                show_questions(df_theme, "theme")
             else:
                 st.write("No hay preguntas disponibles para la temática seleccionada.")
 
 
-def show_questions(df):
+def show_questions(df, prefix):
     user_answers = {}
     for index, row in df.iterrows():
         st.write(f"**{index + 1}. {row['question']}**")
@@ -102,13 +102,12 @@ def show_questions(df):
             'c': row['answer_c'],
             'd': row['answer_d']
         }
-        user_answers[index] = st.radio("Seleccione una opción:", list(options.keys()), key=f"question_{index}")
+        user_answers[index] = st.radio("Seleccione una opción:", list(options.keys()), key=f"{prefix}_question_{index}")
 
-    if st.button("Submit"):
+    if st.button("Submit", key=f"{prefix}_submit"):
         correct_count = 0
         for index, row in df.iterrows():
             if user_answers[index] == row['correct_answer']:
                 correct_count += 1
         st.write(f"Has acertado {correct_count} de {len(df)} preguntas.")
-
 
