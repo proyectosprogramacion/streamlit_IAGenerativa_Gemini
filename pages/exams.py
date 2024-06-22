@@ -112,4 +112,3 @@ def show_questions(df, prefix):
             st.write(f"**Respuesta correcta:** {row['correct_answer']}")
             st.write(f"**Justificación:** {row['justification']}")
             st.write("---")
-
