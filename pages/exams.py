@@ -31,6 +31,7 @@ def show():
         unsafe_allow_html=True
     )
 
+
     # Crea un cliente de BigQuery
     client = bigquery.Client()
 
@@ -50,10 +51,48 @@ def show():
     # Convertir la lista de diccionarios a un DataFrame de pandas
     df = pd.DataFrame(rows)
 
+    # Verificar los nombres de las columnas
+    st.write("Columnas del DataFrame:")
+    st.write(df.columns)
+
+    # Mostrar las primeras filas del DataFrame para ver los datos
+    st.write("Primeras filas del DataFrame:")
+    st.write(df.head())
+
+    # Crear pestañas
+    tab1, tab2 = st.tabs(["Preguntas Aleatorias", "Preguntas por Temática"])
+
+    with tab1:
+        st.header("Preguntas Aleatorias")
+        df_random = df.sample(frac=1).reset_index(drop=True)  # Shuffle the DataFrame
+        show_questions(df_random)
+
+    with tab2:
+        st.header("Preguntas por Temática")
+        theme = st.selectbox("Seleccione una temática:", [
+            "e-learning", "criptografía", "modelo OSI", "redes",
+            "accesibilidad", "Real Decreto 1112/2018 de 7 de septiembre, sobre accesibilidad de los sitios web",
+            "Guía de comunicación digital de la Administración del Estado"
+        ])
+
+        if theme:
+            query_theme = f"""
+                SELECT question, answer_a, answer_b, answer_c, answer_d, correct_answer, theme, justification
+                FROM `qwiklabs-asl-03-2bf18f19f570.oposiciones_TAI.oposiciones_TAI`
+                WHERE theme = '{theme}'
+            """
+            query_job_theme = client.query(query_theme)
+            results_theme = query_job_theme.result()
+            rows_theme = [dict(row) for row in results_theme]
+            df_theme = pd.DataFrame(rows_theme)
+
+            if not df_theme.empty:
+                show_questions(df_theme)
+            else:
+                st.write("No hay preguntas disponibles para la temática seleccionada.")
 
 
-    # Mostrar las preguntas y opciones de respuesta
-    st.write("## Examen")
+def show_questions(df):
     user_answers = {}
     for index, row in df.iterrows():
         st.write(f"**{index + 1}. {row['question']}**")
@@ -72,7 +111,4 @@ def show():
                 correct_count += 1
         st.write(f"Has acertado {correct_count} de {len(df)} preguntas.")
 
-    # Mostrar las primeras filas del DataFrame para ver los datos
-    st.write("Primeras filas del DataFrame:")
-    st.write(df.head())
 
