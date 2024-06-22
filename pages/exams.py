@@ -11,20 +11,14 @@ def show():
     st.markdown(
         """
         <style>
-        div[role="radiogroup"] > label > div[data-testid="stMarkdownContainer"] > p {
-            color: black;
-        }
-        div[role="radiogroup"] > label > div[data-testid="stMarkdownContainer"] > div {
+        div[role="radiogroup"] > label > div[role="radio"] > div:first-child {
             background-color: black !important;
-            border: 1px solid black !important;
         }
-        div[role="radiogroup"] > label > div[role="radio"] {
+        div[role="radiogroup"] > label > div[role="radio"] > div:first-child > div {
             background-color: black !important;
-            border: 1px solid black !important;
         }
-        div[role="radiogroup"] > label > div[role="radio"]::after {
+        div[role="radiogroup"] > label > div[role="radio"] > div:first-child > div > input[type="radio"]:checked + div {
             background-color: black !important;
-            border: 1px solid black !important;
         }
         </style>
         """,
@@ -110,4 +104,12 @@ def show_questions(df, prefix):
             if user_answers[index] == row['correct_answer']:
                 correct_count += 1
         st.write(f"Has acertado {correct_count} de {len(df)} preguntas.")
+
+        st.write("### Detalle de Respuestas:")
+        for index, row in df.iterrows():
+            st.write(f"**{index + 1}. {row['question']}**")
+            st.write(f"**Tu respuesta:** {user_answers[index]}")
+            st.write(f"**Respuesta correcta:** {row['correct_answer']}")
+            st.write(f"**Justificación:** {row['justification']}")
+            st.write("---")
 
