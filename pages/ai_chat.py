@@ -92,10 +92,10 @@ def handle_chat_tai():
         <!-- Search Widget -->
         <!-- Widget JavaScript bundle -->
             <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=es"></script>
-            
+
             <!-- Search widget element is not visible by default -->
             <gen-search-widget
-              configId="37793df9-0b1c-403a-84d7-afa580de948e"
+              configId="f5c825bd-0167-44b1-a8a4-9179e51599a3"
               triggerId="searchWidgetTrigger">
             </gen-search-widget>
             
