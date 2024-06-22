@@ -1,5 +1,7 @@
 import streamlit as st
+
 import streamlit.components.v1 as components
+
 
 
 # Función principal para mostrar la pestaña de AI Chat
@@ -60,9 +62,10 @@ def show():
 
 # Función para manejar el chat de Dialogflow TAI
 def handle_chat_tai():
-    # Insertar código HTML y JavaScript de Dialogflow
+    # Insertar código HTML y JavaScript de Dialogflow y el widget de búsqueda
     components.html(
         """
+        <!-- Dialogflow Widget -->
         <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
         <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
         <df-messenger
@@ -87,14 +90,17 @@ def handle_chat_tai():
             right: 16px;
           }
         </style>
-        """,
-        height=500,
-    )
 
-    # Insertar el iframe para el widget de búsqueda
-    st.markdown("""
-        <iframe src="http://localhost:8000/search_widget.html" width="100%" height="500"></iframe>
-        """, unsafe_allow_html=True)
+        <!-- Search Widget -->
+        <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+        <gen-search-widget
+          configId="8320356a-9b55-4fd7-93e8-74f3a1bd5bfe"
+          triggerId="searchWidgetTrigger">
+        </gen-search-widget>
+        <input placeholder="Search here" id="searchWidgetTrigger" />
+        """,
+        height=600,
+    )
 
 # Función para manejar la lógica del chat
 def handle_chat():
