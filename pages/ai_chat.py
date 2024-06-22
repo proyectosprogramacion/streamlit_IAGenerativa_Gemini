@@ -1,8 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-
-
 # Función principal para mostrar la pestaña de AI Chat
 def show():
     st.title("AI Chat 🗣️")
@@ -33,7 +31,7 @@ def show():
             background-color: #3282b8;
         }
         </style>
-        """, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
 
     sub_tabs = ["Chat TAI", "Chat UCM", "Chat UVA"]
     sub_tab_buttons = st.columns(len(sub_tabs))
@@ -59,6 +57,7 @@ def show():
         st.header("Chat UVA")
         handle_chat()
 
+
 # Función para manejar el chat de Dialogflow TAI
 def handle_chat_tai():
     # Insertar código HTML y JavaScript de Dialogflow y el widget de búsqueda
@@ -68,38 +67,44 @@ def handle_chat_tai():
         <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
         <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
         <df-messenger
-          project-id="qwiklabs-asl-03-2bf18f19f570"
-          agent-id="7c709f9b-d5cc-498c-979e-0e3547dddd0e"
-          language-code="en"
-          max-query-length="-1">
-          <df-messenger-chat-bubble
-           chat-title="">
-          </df-messenger-chat-bubble>
+            project-id="qwiklabs-asl-03-2bf18f19f570"
+            agent-id="66c8500c-e643-4bef-a031-c26b9c93e0b7"
+            language-code="es"
+            max-query-length="-1">
+            <df-messenger-chat chat-title=""></df-messenger-chat>
         </df-messenger>
         <style>
-          df-messenger {
-            z-index: 999;
-            position: fixed;
-            --df-messenger-font-color: #000;
-            --df-messenger-font-family: Google Sans;
-            --df-messenger-chat-background: #f3f6fc;
-            --df-messenger-message-user-background: #d3e3fd;
-            --df-messenger-message-bot-background: #fff;
-            bottom: 16px;
-            right: 16px;
-          }
+            df-messenger {
+                z-index: 999;
+                position: fixed;
+                --df-messenger-font-color: #000;
+                --df-messenger-font-family: Google Sans;
+                --df-messenger-chat-background: #f3f6fc;
+                --df-messenger-message-user-background: #d3e3fd;
+                --df-messenger-message-bot-background: #fff;
+                bottom: 0;
+                right: 0;
+                top: 0;
+                width: 350px;
+            }
         </style>
 
         <!-- Search Widget -->
-        <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=en_US"></script>
+        <!-- Widget JavaScript bundle -->
+        <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=es"></script>
+
+        <!-- Search widget element is not visible by default -->
         <gen-search-widget
-          configId="8320356a-9b55-4fd7-93e8-74f3a1bd5bfe"
-          triggerId="searchWidgetTrigger">
+            configId="ce6e714e-c2b9-4182-b926-1cc983f78c69"
+            triggerId="searchWidgetTrigger">
         </gen-search-widget>
+
+        <!-- Element that opens the widget on click. It does not have to be an input -->
         <input placeholder="Search here" id="searchWidgetTrigger" />
         """,
         height=600,
     )
+
 
 # Función para manejar la lógica del chat
 def handle_chat():
@@ -109,7 +114,6 @@ def handle_chat():
     user_input = st.text_input("You: ")
     if st.button("Send"):
         st.session_state.messages.append(f"You: {user_input}")
-
 
     for message in st.session_state.messages:
         st.write(message)
