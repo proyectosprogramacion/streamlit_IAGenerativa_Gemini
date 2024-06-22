@@ -2,6 +2,7 @@ import streamlit as st
 from google.cloud import bigquery
 import pandas as pd
 
+
 def show():
     st.title("Exams Page 📝")
     st.write("Here you can take various exams.")
@@ -21,8 +22,11 @@ def show():
     query_job = client.query(query)
     results = query_job.result()
 
-    # Convierte los resultados a un DataFrame de pandas
-    df = pd.DataFrame(list(results))
+    # Convertir los resultados a una lista de diccionarios
+    rows = [dict(row) for row in results]
+
+    # Convertir la lista de diccionarios a un DataFrame de pandas
+    df = pd.DataFrame(rows)
 
     # Verificar los nombres de las columnas
     st.write("Columnas del DataFrame:")
@@ -51,4 +55,8 @@ def show():
             if user_answers[index] == row['correct_answer']:
                 correct_count += 1
         st.write(f"Has acertado {correct_count} de {len(df)} preguntas.")
+
+
+if __name__ == "__main__":
+    show()
 
