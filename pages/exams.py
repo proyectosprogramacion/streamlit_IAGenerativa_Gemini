@@ -7,7 +7,29 @@ def show():
     st.title("Exams Page 📝")
     st.write("Here you can take various exams.")
 
-
+    # Inyectar CSS personalizado para cambiar el color de los botones de radio
+    st.markdown(
+        """
+        <style>
+        div[role="radiogroup"] > label > div[data-testid="stMarkdownContainer"] > p {
+            color: black;
+        }
+        div[role="radiogroup"] > label > div[data-testid="stMarkdownContainer"] > div {
+            background-color: black !important;
+            border: 1px solid black !important;
+        }
+        div[role="radiogroup"] > label > div[role="radio"] {
+            background-color: black !important;
+            border: 1px solid black !important;
+        }
+        div[role="radiogroup"] > label > div[role="radio"]::after {
+            background-color: black !important;
+            border: 1px solid black !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
     # Crea un cliente de BigQuery
     client = bigquery.Client()
@@ -28,13 +50,7 @@ def show():
     # Convertir la lista de diccionarios a un DataFrame de pandas
     df = pd.DataFrame(rows)
 
-    # Verificar los nombres de las columnas
-    st.write("Columnas del DataFrame:")
-    st.write(df.columns)
 
-    # Mostrar las primeras filas del DataFrame para ver los datos
-    st.write("Primeras filas del DataFrame:")
-    st.write(df.head())
 
     # Mostrar las preguntas y opciones de respuesta
     st.write("## Examen")
@@ -56,7 +72,7 @@ def show():
                 correct_count += 1
         st.write(f"Has acertado {correct_count} de {len(df)} preguntas.")
 
-
-if __name__ == "__main__":
-    show()
+    # Mostrar las primeras filas del DataFrame para ver los datos
+    st.write("Primeras filas del DataFrame:")
+    st.write(df.head())
 
