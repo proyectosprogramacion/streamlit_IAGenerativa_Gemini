@@ -79,7 +79,7 @@ def show():
             max_output_tokens=2048,
         )
 
-    prompt = f"""Write 30 questions on the following theme: \n
+    prompt = f"""Write 20 questions on the following theme: \n
         Theme: {theme} \n
         Below each question, provide four possible answers with only one correct answer.
         Below, provide the correct answer.
