@@ -101,6 +101,8 @@ def handle_chat_tai():
             
             <!-- Element that opens the widget on click. It does not have to be an input -->
             <input placeholder="Search here" id="searchWidgetTrigger" />
+            
+                    <iframe src="https://sites.google.com/view/cursoialocura/inicio" width="100%" height="600px" frameborder="0"></iframe>
         """,
         height=600,
     )
