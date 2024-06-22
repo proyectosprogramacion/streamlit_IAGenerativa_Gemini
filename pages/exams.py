@@ -24,6 +24,14 @@ def show():
     # Convierte los resultados a un DataFrame de pandas
     df = pd.DataFrame(list(results))
 
+    # Verificar los nombres de las columnas
+    st.write("Columnas del DataFrame:")
+    st.write(df.columns)
+
+    # Mostrar las primeras filas del DataFrame para ver los datos
+    st.write("Primeras filas del DataFrame:")
+    st.write(df.head())
+
     # Mostrar las preguntas y opciones de respuesta
     st.write("## Examen")
     user_answers = {}
