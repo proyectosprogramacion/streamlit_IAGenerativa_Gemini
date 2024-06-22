@@ -44,7 +44,7 @@ st.markdown(
 # Panel lateral con imagen y enlaces externos
 with st.sidebar:
     st.image("resources/logo.webp", use_column_width=True)
-    st.markdown("[Enlace 1](http://example.com)")
+    st.markdown("[Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado](https://sede.inap.gob.es/tai)")
     st.markdown("[Enlace 2](http://example.com)")
     st.markdown("[Enlace 3](http://example.com)")
 
