@@ -34,7 +34,7 @@ Puedes leer más sobre el consumo que supone el uso de la IA en el siguiente enl
 
 La aplicación incluye una funcionalidad para buscar legislación relevante para las oposiciones.
 
-![Search Page](./images/search_page.png)
+![Search Page](Images/search_page.png)
 
 ## Instalación
 
