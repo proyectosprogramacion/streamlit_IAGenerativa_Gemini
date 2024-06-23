@@ -84,8 +84,21 @@ def save_to_bigquery(response_text):
 
         d = answers[0].strip()
         correct = answers[1].split('Tema:')[0].strip()
+        if 'Tema:' not in answers[1] or 'Justificación:' not in answers[1]:
+            st.error("Formato incorrecto en tema o justificación:", answers[1])
+            continue  # Saltar preguntas con formato incorrecto
+
         theme = answers[1].split('Tema:')[1].split('Justificación:')[0].strip()
         justification = answers[1].split('Justificación:')[1].strip()
+
+        st.write(f"Pregunta: {q}")  # Registro de depuración
+        st.write(f"Respuesta a: {a}")  # Registro de depuración
+        st.write(f"Respuesta b: {b}")  # Registro de depuración
+        st.write(f"Respuesta c: {c}")  # Registro de depuración
+        st.write(f"Respuesta d: {d}")  # Registro de depuración
+        st.write(f"Respuesta correcta: {correct}")  # Registro de depuración
+        st.write(f"Tema: {theme}")  # Registro de depuración
+        st.write(f"Justificación: {justification}")  # Registro de depuración
 
         rows_to_insert.append({
             'question': q,
