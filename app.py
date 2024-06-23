@@ -45,8 +45,8 @@ st.markdown(
 with st.sidebar:
     st.image("resources/logo.webp", use_column_width=True)
     st.markdown("[Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado](https://sede.inap.gob.es/tai)")
-    st.markdown("[Enlace 2](http://example.com)")
-    st.markdown("[Enlace 3](http://example.com)")
+    st.markdown("[Servicios informáticos UCM](https://www.ucm.es/procesos-finalizados-1)")
+    st.markdown("[Programador UVA](https://pas.uva.es/1.convocatorias/index.html)")
 
 # Menú superior
 st.markdown('<div class="main-header">Tech App 💻</div>', unsafe_allow_html=True)
