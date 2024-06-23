@@ -14,21 +14,21 @@ Puedes leer más sobre el consumo que supone el uso de la IA en el siguiente enl
 
 - **Questions 📄**: Muestra preguntas de exámenes oficiales.
   
-  ![Questions Page](./images/questions_page.png)
+  ![Questions Page](Images/questions_page.png)
   
 - **Exams 📝**: Muestra preguntas de exámenes tanto oficiales como generadas por IA por otros usuarios. Puedes seleccionar una temática concreta.
   
-  ![Exams Page](./images/exams_page.png)
+  ![Exams Page](Images/exams_page.png)
   
-  ![Exams Page Aleatorias](./images/exams_page_aleatorias.png)
+  ![Exams Page Aleatorias](Images/exams_page_aleatorias.png)
   
 - **AI Questions 🤖**: Genera preguntas nuevas con IA generativa.
   
-  ![AI Questions](./images/ai_questions.png)
+  ![AI Questions](Images/ai_questions.png)
   
 - **AI Chat 🗣️**: Permite acceder a un chat sobre la legislación de la oposición, además de recursos disponibles sobre legislación específica para cada oposición.
   
-  ![AI Chat](./images/ai_chat.png)
+  ![AI Chat](Images/ai_chat.png)
   
 ## Buscar Legislación
 
