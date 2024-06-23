@@ -50,16 +50,38 @@ def save_to_bigquery(response_text):
 
     rows_to_insert = []
     questions = response_text.split('Pregunta:')
+    st.write("Número de preguntas encontradas:", len(questions) - 1)  # Registro de depuración
+
     for question in questions[1:]:
         parts = question.split('Respuesta a:')
+        if len(parts) < 2:
+            st.error("Formato incorrecto en pregunta:", question)
+            continue  # Saltar preguntas con formato incorrecto
+
         q = parts[0].strip()
         answers = parts[1].split('Respuesta b:')
+        if len(answers) < 2:
+            st.error("Formato incorrecto en respuestas a/b:", parts[1])
+            continue  # Saltar preguntas con formato incorrecto
+
         a = answers[0].strip()
         answers = answers[1].split('Respuesta c:')
+        if len(answers) < 2:
+            st.error("Formato incorrecto en respuestas b/c:", answers[1])
+            continue  # Saltar preguntas con formato incorrecto
+
         b = answers[0].strip()
         answers = answers[1].split('Respuesta d:')
+        if len(answers) < 2:
+            st.error("Formato incorrecto en respuestas c/d:", answers[1])
+            continue  # Saltar preguntas con formato incorrecto
+
         c = answers[0].strip()
         answers = answers[1].split('Respuesta correcta:')
+        if len(answers) < 2:
+            st.error("Formato incorrecto en respuesta correcta:", answers[1])
+            continue  # Saltar preguntas con formato incorrecto
+
         d = answers[0].strip()
         correct = answers[1].split('Tema:')[0].strip()
         theme = answers[1].split('Tema:')[1].split('Justificación:')[0].strip()
@@ -76,12 +98,17 @@ def save_to_bigquery(response_text):
             'justification': justification
         })
 
-    table_id = "qwiklabs-asl-03-2bf18f19f570.oposiciones_TAI.oposiciones_TAI"
-    errors = client.insert_rows_json(table_id, rows_to_insert)
-    if errors == []:
-        st.success('Las preguntas se han guardado exitosamente en BigQuery.')
+    st.write("Número de filas a insertar:", len(rows_to_insert))  # Registro de depuración
+
+    if rows_to_insert:  # Solo intentar insertar si hay filas
+        table_id = "qwiklabs-asl-03-2bf18f19f570.oposiciones_TAI.oposiciones_TAI"
+        errors = client.insert_rows_json(table_id, rows_to_insert)
+        if errors == []:
+            st.success('Las preguntas se han guardado exitosamente en BigQuery.')
+        else:
+            st.error(f'Error al insertar filas en BigQuery: {errors}')
     else:
-        st.error(f'Error al insertar filas en BigQuery: {errors}')
+        st.error("No hay filas para insertar en BigQuery.")
 
 def show():
     st.title("AI Generated Questions 🤖")

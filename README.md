@@ -2,6 +2,11 @@
 
 ![Home Page](Images/home_page.png)
 
+
+## Aplicación desplegada
+
+Si quieres ejecutar la aplicación puedes hacerlo en este enlace: [Oposiciones Tech App](https://earth.org/the-green-dilemma-can-ai-fulfil-its-potential-without-harming-the-environment/).
+
 ## Descripción
 
 Esta es una aplicación para preparar oposiciones a programador/a con IA Generativa. Nuestro objetivo es ofrecerte una experiencia de estudio moderna y eficiente, utilizando lo último en tecnología de inteligencia artificial para ayudarte a alcanzar tus metas.
