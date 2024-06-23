@@ -45,13 +45,7 @@ def show():
     # Convertir la lista de diccionarios a un DataFrame de pandas
     df = pd.DataFrame(rows)
 
-    # Verificar los nombres de las columnas
-    st.write("Columnas del DataFrame:")
-    st.write(df.columns)
 
-    # Mostrar las primeras filas del DataFrame para ver los datos
-    st.write("Primeras filas del DataFrame:")
-    st.write(df.head())
 
     # Crear pestañas
     tab1, tab2 = st.tabs(["Preguntas Aleatorias", "Preguntas por Temática"])

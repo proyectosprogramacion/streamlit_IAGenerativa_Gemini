@@ -49,7 +49,7 @@ with st.sidebar:
     st.markdown("[Programador UVA](https://pas.uva.es/1.convocatorias/index.html)")
 
 # Menú superior
-st.markdown('<div class="main-header">Tech App 💻</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">Oposiciones App 💻</div>', unsafe_allow_html=True)
 
 pages = {
     "🏠 Home": home.show,
