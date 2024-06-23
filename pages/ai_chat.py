@@ -33,11 +33,11 @@ def show():
         </style>
     """, unsafe_allow_html=True)
 
-    sub_tabs = ["Chat TAI", "Chat UCM", "Chat UVA"]
+    sub_tabs = ["💻 Chat TAI", "🎓 Chat UCM", "📚 Chat UVA"]
     sub_tab_buttons = st.columns(len(sub_tabs))
 
     if "sub_tab" not in st.session_state:
-        st.session_state.sub_tab = "Chat TAI"
+        st.session_state.sub_tab = "💻 Chat TAI"
 
     for i, sub_tab in enumerate(sub_tabs):
         if sub_tab_buttons[i].button(sub_tab):
@@ -45,17 +45,51 @@ def show():
 
     st.markdown('<hr>', unsafe_allow_html=True)
 
-    if st.session_state.sub_tab == "Chat TAI":
-        st.header("Chat TAI")
-        handle_chat_tai()
+    if st.session_state.sub_tab == "💻 Chat TAI":
+        st.header("💻 Chat Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado")
+        show_chat_and_links(handle_chat_tai)
 
-    elif st.session_state.sub_tab == "Chat UCM":
-        st.header("Chat UCM")
-        handle_chat()
+    elif st.session_state.sub_tab == "🎓 Chat UCM":
+        st.header("🎓 Chat UCM")
+        show_chat_and_links(handle_chat)
 
-    elif st.session_state.sub_tab == "Chat UVA":
-        st.header("Chat UVA")
-        handle_chat()
+    elif st.session_state.sub_tab == "📚 Chat UVA":
+        st.header("📚 Chat UVA")
+        show_chat_and_links(handle_chat)
+
+
+def show_chat_and_links(chat_function):
+    col1, col2 = st.columns([2, 1])  # Ajusta el ancho de las columnas según sea necesario
+
+    with col1:
+        st.subheader("Chat 🗨️")
+        chat_function()
+
+    with col2:
+        st.subheader("Enlaces 🔗")
+        st.markdown("""
+        <style>
+        .resource-button {
+            background-color: #1b262c;
+            color: white;
+            border: 1px solid #3282b8;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .resource-button:hover {
+            background-color: #3282b8;
+        }
+        </style>
+        """, unsafe_allow_html=True)
+
+        st.markdown('<a class="resource-button" href="https://drive.google.com/drive/folders/1vFizYkFUViPU8MCWNrkAGPeBjlPxp-Ev" target="_blank">📜 Acceder a las Leyes del Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado (Libre)</a>', unsafe_allow_html=True)
+        st.markdown('<a class="resource-button" href="https://drive.google.com/drive/folders/1imLJoez96ejYQSgPM_FXc-llTnTzRi_I" target="_blank">📘 Acceder al temario del Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado (Libre)</a>', unsafe_allow_html=True)
+        st.markdown('<a class="resource-button" href="https://sites.google.com/view/cuerpotecnicosauxiliaresdeinf/" target="_blank">🔍 Acceder al buscador de consulta de las leyes</a>', unsafe_allow_html=True)
 
 
 # Función para manejar el chat de Dialogflow TAI
@@ -85,28 +119,14 @@ def handle_chat_tai():
                 bottom: 0;
                 right: 0;
                 top: 0;
-                width: 350px;
+                width: 100%;
+                height: 600px; /* Altura ajustada */
             }
         </style>
 
-        <!-- Search Widget -->
-        <!-- Widget JavaScript bundle -->
-            <script src="https://cloud.google.com/ai/gen-app-builder/client?hl=es"></script>
-
-            <!-- Search widget element is not visible by default -->
-            <gen-search-widget
-              configId="f5c825bd-0167-44b1-a8a4-9179e51599a3"
-              triggerId="searchWidgetTrigger">
-            </gen-search-widget>
-            
-            <!-- Element that opens the widget on click. It does not have to be an input -->
-            <input placeholder="Search here" id="searchWidgetTrigger" />
-            
-                    <iframe src="https://sites.google.com/view/cursoialocura/inicio" width="100%" height="600px" frameborder="0"></iframe>
         """,
         height=600,
     )
-
 
 # Función para manejar la lógica del chat
 def handle_chat():
