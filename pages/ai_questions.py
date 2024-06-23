@@ -59,16 +59,17 @@ def show():
     text_model_pro, multimodal_model_pro = load_models()
     st.subheader("Generate questions based on a theme")
 
-    # Input for the theme
-    theme = st.text_input("Enter the theme:", key="theme", value="Networks")
+    # Select the theme from predefined options
+    theme = st.selectbox("Select a theme:", ["e-learning 📚", "modelo OSI 🌐", "redes 🖧", "accesibilidad ♿", "Real Decreto 1112/2018 de 7 de septiembre 📜"])
+
     creativity_level = st.radio(
         "Select the creativity level:",
-        ["Low", "High"],
+        ["Low 🤔", "High 💡"],
         key="creativity_level",
         horizontal=True,
     )
 
-    if creativity_level == "Low":
+    if creativity_level == "Low 🤔":
         config = GenerationConfig(
             temperature=0.30,
             max_output_tokens=2048,
@@ -79,19 +80,29 @@ def show():
             max_output_tokens=2048,
         )
 
-    prompt = f"""Write 20 questions on the following theme: \n
+    prompt = f"""
+        Write 15 questions on the following theme: \n
         Theme: {theme} \n
         Below each question, provide four possible answers with only one correct answer.
         Below, provide the correct answer.
         Below, indicates the theme
         Below, provide a reasoned justification for why it is valid. If you have a reference source, it is better. Do not invent anything; if you do not know the justification, indicate it.
-        show me everything in Spanish
+        For each question, format the output as follows:
+        Pregunta: <question>
+        Respuesta a: <answer_a>
+        Respuesta b: <answer_b>
+        Respuesta c: <answer_c>
+        Respuesta d: <answer_d>
+        Respuesta correcta: <correct_answer>
+        Tema: <theme>
+        Justificación: <justification>
+        Show me everything in Spanish.
         """
 
     generate_questions = st.button("Generate Questions", key="generate_questions")
     if generate_questions and prompt:
         with st.spinner("Generating your questions using Gemini 1.0 Pro ..."):
-            tab_questions, tab_prompt = st.tabs(["Questions", "Prompt"])
+            tab_questions, tab_prompt = st.tabs(["Questions 💬", "Prompt 📝"])
             with tab_questions:
                 response = get_gemini_pro_text_response(
                     text_model_pro,

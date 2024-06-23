@@ -46,7 +46,7 @@ def show():
     st.markdown('<hr>', unsafe_allow_html=True)
 
     if st.session_state.sub_tab == "💻 Chat TAI":
-        st.header("💻 Chat Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado")
+        st.header("💻 Cuerpo de Técnicos Auxiliares de Informática de la Administración del Estado")
         show_chat_and_links(handle_chat_tai)
 
     elif st.session_state.sub_tab == "🎓 Chat UCM":
