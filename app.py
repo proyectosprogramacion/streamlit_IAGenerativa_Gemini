@@ -6,7 +6,7 @@ import pages.ai_questions as ai_questions
 import pages.ai_chat as ai_chat
 
 # Configuración de la página
-st.set_page_config(page_title="Tech App", layout="wide")
+st.set_page_config(page_title="Oposiciones App", layout="wide")
 
 # Estilos CSS para el diseño tech y juvenil
 st.markdown(

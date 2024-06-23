@@ -1,11 +1,13 @@
-﻿1. ¿Qué pauta incluye la nueva norma de accesibilidad WCAG 2.1 frente a su predecesora WCAG 2.0?
+﻿EXAMEN UCM 2024
+
+1. ¿Qué pauta incluye la nueva norma de accesibilidad WCAG 2.1 frente a su predecesora WCAG 2.0?
 a) Adaptable
 b) Compatible
 c) Modalidades de entrada
 d) Accesible por teclado
 correcta: c
 temática: accesibilidad y Real Decreto 1112/2018 de 7 de septiembre, sobre accesibilidad de los sitios web; la Guía de comunicación digital de la Administración del Estado
-
+justificación:
 
 2. Dentro de una solución e-learning, indique dónde se encuadraría un sistema LMS:
 a) Plataforma de formación
@@ -14,7 +16,7 @@ c) Herramientas de comunicación
 d) Ninguna de las anteriores
 correcta: a
 temática: e-learning
-
+justificación:
 
 3. Los niveles superiores del modelo OSI se agrupan dentro del bloque de aplicación mientras que los niveles bajos se agrupan en el:
 a) Bloque de compatibilidad de software
@@ -23,7 +25,7 @@ c) Bloque de transmisión
 d) Bloque de multiplexación y detección de errores
 correcta: c
 temática: modelo OSI
-
+justificación:
 
 4. En la clasificación de las redes de comunicación por su extensión no se incluye:
 a) MAN (Metropolitan Area Network
@@ -32,7 +34,7 @@ c) SAN (State Areal Network)
 d) WAN (Wide Area Network)
 correcta: c
 temática: redes
-
+justificación:
 
 5. ¿Cuál de los siguientes no es un algoritmo de cifrado simétrico?
 a) DES
@@ -41,7 +43,7 @@ c) RSA
 d) AES
 correcta: c
 temática: criptografía
-
+justificación:
 
 6. El componente de las versiones recientes de los sistemas operativos de Microsoft que permite ejecutar el kernel de Linux dentro de Windows se denomina:
 a) WINE
@@ -50,9 +52,7 @@ c) MSLKV
 d) SFU
 correcta: b
 temática: sistema operativo
-
-
-
+justificación:
 
 7. De acuerdo con la normativa vigente en materia de protección de datos personales algunos de los principios que rigen el tratamiento de los datos personales son:
 a) El principio de eficacia, jerarquía, desconcentración y coordinación
@@ -61,9 +61,7 @@ c) Licitud, lealtad, transparencia y limitación de la finalidad
 d) Licitud, coordinación, transparencia y limitación de la finalidad
 correcta: c
 temática: Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales
-
-
-
+justificación:
 
 8. ¿Qué es SQLMetal?
 a) Es un lenguaje declarativo de acceso a bases de datos relacionales
@@ -72,9 +70,7 @@ c) Es un conjunto de extensiones a ANSI SQL
 d) Es un estándar de acceso a bases de datos
 correcta: b 
 temática: bases de datos SQL
-
-
-
+justificación:
 
 9. ¿Qué certificados contiene un DNIE?
 a) Certificado de componente y emisión
@@ -83,7 +79,7 @@ c) Certificado de autenticación, emisión y firma
 d) Certificación de componente, autenticación, firma y emisión
 correcta: b
 temática: DNI y firma electrónica
-
+justificación:
 
 10. ¿Qué tres tipos de buses hay en un ordenador?
 a) Datos, registros y control
@@ -92,7 +88,7 @@ c) Datos, dirección y control
 d) Registros, control y memoria
 correcta: c
 temática: hardware
-
+justificación:
 
 11. ¿Con qué nombre hacemos referencia a los datos anómalos, dentro de Data Warehouse?
 a) Outliers
@@ -101,11 +97,7 @@ c) Easyliers
 d) Totaliers
 correcta: a
 temática: data y Data Warehouse
-
-
-
-
-
+justificación:
 
 12. Durante una inspección de código por un grupo de personas, ¿quiénes son las encargadas de hacerla?
 a) El programador, el analista y el certificador
@@ -114,9 +106,7 @@ c) El moderador, el diseñador, el certificador y un especialista en pruebas
 d) El programador, el certificador, el supervisor de compatibilidad y un especialista en pruebas
 correcta: b
 temática: pruebas de caja, software y hardware
-
-
-
+justificación:
 
 13. Señala cuál de las siguientes afirmaciones es correcta:
 a) Será obligatorio constituir un Comité de Seguridad y Salud en todas las empresas que cuenten con 100 o más trabajadores
@@ -125,9 +115,7 @@ c) El Comité de Seguridad y Salud está facultado para conocer e informar la me
 d) El Comité de Seguridad y Salud es el órgano colegiado formado por los delegados de prevención
 correcta: c
 temática:  Real Decreto Legislativo 5/2015 Texto Refundido de la Ley del Estatuto Básico del Empleado Público
-
-
-
+justificación:
 
 14. ¿Cuáles son los elementos funcionales de la arquitectura de un ordenador?
 a) Buses, sistema operativo, memoria y CPU
@@ -136,7 +124,7 @@ c) Sistema de interconexión, CPU, memoria y unidad artimético-lógica
 d) Sistema de interconexión, CPU, memoria, sistema de E/S
 correcta: d
 temática: hardware
-
+justificación:
 
 15. ¿Qué tipos de lenguajes de programación existen?
 a) Lenguajes de ordenador y lenguajes códigos
@@ -145,7 +133,7 @@ c) Lenguajes semánticos y lenguajes máquina
 d) Lenguajes código y lenguajes funcionales
 correcta: b
 temática: lenguajes programación
-
+justificación:
 
 16. ¿Qué tipos de paradigmas de programación existen?
 a) Imperativo, declarativo, simbólico y a nivel máquina
@@ -154,7 +142,7 @@ c) A nivel máquina, semántico, declarativo y de encapsulación
 d) Imperativo, declarativo, simbólico y de encapsulación
 correcta: b
 temática: lenguajes programación
-
+justificación:
 
 17. El borrado de metadatos se recoge en la Guía CCN-STIC:
 a) 828
@@ -163,9 +151,7 @@ c) 817
 d) 835
 correcta: d
 temática: Guía CCN-STIC
-
-
-
+justificación:
 
 18. Según la Ley 37/2007 de Reutilización de Información del Sector Público, las Unidades responsables de Información:
 a) En la AGE, se designan en el ámbito de la Secretaría General Técnica de cada departamento
@@ -174,7 +160,7 @@ c) Facilitan información sobre cualquier órgano competente de la AGE, para la 
 d) Atender y dar respuesta a las reclamaciones que le sean redirigidas
 correcta: b
 temática: Ley 37/2007 de Reutilización de Información del Sector Público
-
+justificación:
 
 19. Señale la afirmación correcta. Cuando en un microprocesador hablamos de un ciclo de máquina de tipo «fetch» nos estamos refiriendo a:
 a) Lectura de dato de la memoria
@@ -183,7 +169,7 @@ c) Escritura de dato en un dispositivo
 d) Lectura de microinstrucción
 correcta: d
 temática: hardware
-
+justificación:
 
 20. Señale cuál de las siguientes respuestas es una plataforma que permite crear aplicaciones nativas para IOs, Android y Windows usando el lenguaje C#:
 a) Bootstrap
@@ -192,10 +178,9 @@ c) SonarQube
 d) Xamarin
 correcta: d
 temática: C++, C,  .NET Framework y ASP.NET
+justificación:
 
-
-
-
+EXAMEN UCM 2023
 1. Señale cuál de las siguientes respuestas NO se considera un principio específico de la interoperabilidad, según indica el Real Decreto 4/2010 en su artículo 4:
 a) La interoperabilidad como cualidad integral
 b) Reevaluación periódica de la interoperabilidad
@@ -203,7 +188,7 @@ c) Carácter multidimensional de la interoperabilidad
 d) Enfoque de soluciones multilaterales
 correcta: b
 temática: Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica.
-
+justificación:
 
 2. El componente de las versiones recientes de los sistemas operativos de Microsoft que permite ejecutar el kernel de Linux dentro de Windows se denomina:
 a) WINE (Wine Is Not an Emulator)
@@ -212,7 +197,7 @@ c) MSLKV (Microsoft Linux Kernel Virtualization)
 d) SFU (Windows Services for Unix)
 correcta: b
 temática: sistema operativo
-
+justificación:
 
 3. X.25 es:
 a) un estándar para el acceso a redes privadas de conmutación de paquetes
@@ -221,9 +206,7 @@ c) un estándar para el acceso a redes privadas de conmutación de circuitos
 d) un estándar para el acceso a redes públicas de conmutación de paquetes
 correcta: d
 temática: protocolos y correo electrónico 
-
-
-
+justificación:
 
 4. Si se desea establecer una comunicación cifrada por criptografía simétrica en un grupo de N interlocutores, ¿cuántas claves serían necesarias?
 a) N(N-1)/4
@@ -232,9 +215,7 @@ c) 2*N/(N-1)
 d) 2N-½
 correcta: b
 temática: criptografía
-
-
-
+justificación:
 
 5. En criptografía asimétrica a la hora de firmar electrónicamente, ¿qué afirmación es correcta?
 a) Se firma con la clave privada del receptor y se valida la firma con la clave pública del receptor
@@ -243,9 +224,7 @@ c) Se firma con la clave pública del emisor y se valida la firma con la clave p
 d) Se firma con la clave privada del emisor y se valida la firma con la clave pública del emisor
 correcta: d
 temática: DNI y firma electrónica
-
-
-
+justificación:
 
 6. ¿Cuál de los siguientes formatos de firma electrónica NO está recomendado por la Norma técnica de Interoperabilidad de política de firma y sello electrónicos y de certificados de la Administración?
 a) CAdes
@@ -254,9 +233,7 @@ c) LAdes
 d) XAdes
 correcta: c
 temática: DNI y firma electrónica
-
-
-
+justificación:
 
 7. ¿Cuáles son los elementos del sistema Cl@ve?
 a) Proveedores de servicios de administración electrónica, proveedores de servicios de identificación y autenticación y pasarela de identificación
@@ -265,9 +242,7 @@ c) Proveedores de servicios de administración electrónica, proveedores de serv
 d) Proveedores de servicios de administración electrónica, clientes de servicios de identificación y autenticación y pasarela de identificación
 correcta: a
 temática: DNI y firma electrónica
-
-
-
+justificación:
 
 8. Un certificado electrónico codificado en binario puede tener distintas extensiones, ¿cuál de las siguientes NO es correcta?
 a) .DER
@@ -276,9 +251,7 @@ c) .PEM
 d) .CER
 correcta: c
 temática: DNI y firma electrónica
-
-
-
+justificación:
 
 9. ¿Cuáles son los 5 componentes de control interno del marco de referencia COSO 2013?
 a) Ambiente de control, Evaluación de riesgos, actividades de control, Información y Comunicación y Actividades de monitoreo
@@ -287,11 +260,7 @@ c) Ambiente de control, Evaluación de activos, actividades de control, Vulnerab
 d) Actividad de integridad, Evaluación de activos, actividades de control, Información y Comunicación y Actividades de gestión
 correcta: a
 temática: ciberseguridad y monitorización
-
-
-
-
-
+justificación:
 
 10. ¿Cuáles son las actividades en el Método de Análisis de Riesgos (MAR) de la metodología MAGERIT?
 a) Caracterización de los activos, caracterización de las amenazas, caracterización de las vulnerabilidades y tratamiento del impacto
@@ -300,11 +269,7 @@ c) Caracterización de los activos, caracterización de las amenazas, caracteriz
 d) Caracterización de las amenazas, caracterización de las vulnerabilidades y caracterización de las medidas
 correcta: c
 temática: seguridad y desarrollo: magerit y scrum
-
-
-
-
-
+justificación:
 
 11. En la norma técnica de interoperabilidad que trata los requisitos de conexión a la Red SARA, ¿Cómo se denomina el elemento que da acceso a la Red SARA?
 a) Punto de Presencia
@@ -313,9 +278,7 @@ c) Red operativa
 d) Punto de interoperabilidad
 correcta: a
 temática: Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica.
-
-
-
+justificación:
 
 12. En la guía CCN-STIC 804, ¿qué nivel de madurez corresponde cuando un proceso es “gestionado y medible”?
 a) L2
@@ -324,9 +287,7 @@ c) Ese nivel no existe
 d) L4
 correcta: d
 temática: Guía CCN-STIC
-
-
-
+justificación:
 
 13. En una red en anillo, la tasa de errores de la transmisión es muy pequeña ya que la información se regenera en cada nodo de estación.
 a) Falso
@@ -335,9 +296,7 @@ c) Depende del número de estaciones
 d) Depende de la velocidad de la red
 correcta: b
 temática: redes
-
-
-
+justificación:
 
 14. ¿Qué niveles OSI proporciona una red local?
 a) 1 y 2
@@ -346,13 +305,7 @@ c) 5 y 6
 d) 6 y 7
 correcta: a
 temática: modelo OSI y  arquitectura TCP/IP
-
-
-
-
-
-
-
+justificación:
 
 15. ¿Cuáles son los tres principios o características básicas de la seguridad en el acceso a la información?
 a) Confidencialidad, Integridad y Robustez
@@ -361,9 +314,7 @@ c) Confidencialidad, Integridad y Disponibilidad
 d) Confiabilidad, Usabilidad y Disponibilidad
 correcta: d
 temática: seguridad acceso a la información
-
-
-
+justificación:
 
 16. ¿Qué es el OWASP?
 a) Iniciativa abierta que persigue la identificación de los problemas que hacen al software inseguro
@@ -372,13 +323,7 @@ c) Es un lenguaje de programación desarrollado por un grupo de ingenieros de Su
 d) Es un mecanismo de comunicación distribuida que permite establecer un enlace entre dos programas que se ejecutan de manera independiente, pero que están unidos mediante una red.
 correcta: a
 temática: seguridad y desarrollo: magerit y scrum
-
-
-
-
-
-
-
+justificación:
 
 17. El ENS será aplicado por las Administraciones públicas para asegurar la integridad, disponibilidad, autenticidad, confidencialidad y .............................. de los datos, informaciones y servicios utilizados en medios electrónicos que gestionen en el ejercicio de sus competencias.
 a) Legitimidad
@@ -387,11 +332,7 @@ c) Transparencia
 d) Interoperabilidad
 correcta: b
 temática: auditoría y ENS (Esquema Nacional de Seguridad)
-
-
-
-
-
+justificación:
 
 18. El ENS establece que los sistemas de información serán objeto de una auditoria regular ordinaria que verifique el cumplimiento de los requisitos,
 a) al menos cada año
@@ -400,13 +341,7 @@ c) al menos cada tres años
 d) a los seis meses
 correcta: b
 temática: auditoría y ENS (Esquema Nacional de Seguridad)
-
-
-
-
-
-
-
+justificación:
 
 19. ¿En la arquitectura TCP/IP, el nivel que fija la MTU (Unidad de Transferencia Máxima) es?
 a) El nivel de capa
@@ -415,11 +350,7 @@ c) El nivel de enlace
 d) El nivel de reloj
 correcta: c
 temática: modelo OSI y  arquitectura TCP/IP
-
-
-
-
-
+justificación:
 
 20. ¿ A qué nivel OSI trabaja un concentrador o HUB?
 a) Nivel 5
@@ -428,12 +359,9 @@ c) Nivel 2
 d) Nivel 1
 correcta: d
 temática: modelo OSI y  arquitectura TCP/IP
+justificación:
 
-
-
-
-
-
+EXAMEN UCM 2022
 1. De los cuatro octetos que forman una dirección del protocolo IP indicar en qué clase de red se utiliza un octeto para los números de host:
 a) Clase B
 b) Clase D
@@ -441,11 +369,7 @@ c) Clase A
 d) Clase C
 correcta: d 
 temática: protocolo IP y direcciones IPv4 IPv6
-
-
-
-
-
+justificación:
 
 2. Las direcciones IPv6 que proporcionan direccionamiento IP automático a los nodos en caso de que no exista un servidor DHCP, se denominan:
 a) Link-Local
@@ -454,9 +378,7 @@ c) Anycast
 d) Site-Local
 correcta: a
 temática: protocolo IP y direcciones IPv4 IPv6
-
-
-
+justificación:
 
 3. Indicar cuál de los siguientes NO es protocolo de la capa de aplicación del modelo TCP/IP:
 a) UDP
@@ -465,11 +387,7 @@ c) SMTP
 d) BGP
 correcta:  a
 temática: modelo OSI y  arquitectura TCP/IP
-
-
-
-
-
+justificación:
 
 4. ¿En qué lenguaje está basado XML?
 a) HTML
@@ -478,11 +396,7 @@ c) SGML
 d) XTML
 correcta: c
 temática: html, xml y css
-
-
-
-
-
+justificación:
 
 5. ¿Cómo comienza la ejecución de un sistema UNIX?
 a) El primer proceso en ejecutarse es swapper (0) y luego init (1)
@@ -491,7 +405,7 @@ c) El primer proceso en ejecutarse será autoexec.bat
 d) Los sistemas Unix siempre comienzan desde el punto en el que se detuvieron, cargando todos los procesos que estaban activos
 correcta: a
 temática: sistema operativo
-
+justificación:
 
 6. ¿Qué directorio, en una estructura típica de directorios de Unix, almacena la documentación de los programas?
 a) /bin
@@ -500,7 +414,7 @@ c) /usr/man
 d) /usr/doc
 correcta: c
 temática: sistema operativo
-
+justificación:
 
 7. De entre los siguientes, ¿Qué protocolo es utilizado para implantar Redes Privadas Virtuales?
 a) TCP
@@ -509,7 +423,7 @@ c) RARP
 d) ARP
 correcta: b        
 temática: redes
-
+justificación:
 
 8. ¿Cuál es la topología de red que de manera habitual son utilizadas en redes de telefonía que se conectan a centralitas locales y regionales?
 a) En árbol
@@ -518,7 +432,7 @@ c) Malla
 d) Satélites
 correcta: a
 temática: redes
-
+justificación:
 
 9. Las sentencias de SQL que permiten realizar consultas y mantenimiento de los datos, como SELECT, INSERT, UPDATE y DELETE se incluyen dentro de la categoría:
 a) DDL: Data Definition Language
@@ -527,9 +441,7 @@ c) DML: Data Manipulation Language
 d) DAC: Data Access Language
 correcta: c
 temática: bases de datos SQL
-
-
-
+justificación:
 
 10. ¿Cuál de las siguientes no es una característica del Data Wharehouse?
 a) Volátil
@@ -538,11 +450,7 @@ c) Integrada
 d) Variante en el tiempo
 correcta:  a
 temática: data y Data Warehouse
-
-
-
-
-
+justificación:
 
 11. Según MAGERIT v3 los elementos del análisis de riesgos son:
 a) Activos, amenazas y salvaguardas
@@ -551,11 +459,7 @@ c) Disponibilidad, integridad, confidencialidad, trazabilidad y autenticidad
 d) Activos, sistemas de información y riesgos
 correcta:  a
 temática: seguridad y desarrollo: magerit y scrum
-
-
-
-
-
+justificación:
 
 12. Una dirección IP en el protocolo IPv6 está formada por:
 a) 32 bits
@@ -564,9 +468,7 @@ c) 128 bits
 d) 256 bits
 correcta: c
 temática: protocolo IP y direcciones IPv4 IPv6
-
-
-
+justificación:
 
 13. ¿Cuál de las siguientes afirmaciones relativas al DNI electrónico es la correcta?
 a) La renovación de los certificados incluidos en la tarjeta puede realizarse en los puntos de actualización del DNIe y a través de Internet
@@ -575,9 +477,7 @@ c) Actualmente, los certificados electrónicos de autenticación y de Firma Elec
 d) El PIN debe tener un mínimo de 8 caracteres y un máximo de 12
 correcta:  b
 temática: DNI y firma electrónica
-
-
-
+justificación:
 
 14. Indica cuál de las siguientes afirmaciones sobre el Esquema Nacional de Interoperabilidad es verdadera:
 a) Es una norma nacional de aplicación voluntaria para las Administraciones Públicas
@@ -586,9 +486,7 @@ c) Es una norma legal de aplicación obligatoria para las Administraciones Públ
 d) Es una norma de aplicación sólo en el ámbito de la Administración General del Estado
 correcta:  c
 temática: Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica.
-
-
-
+justificación:
 
 15. Los medios o soportes en que se almacenan documentos deberán contar con medidas de seguridad de acuerdo con lo previsto en el Esquema Nacional de Seguridad (ENS), que garanticen:
 a) La interoperabilidad y seguridad de los documentos
@@ -597,11 +495,7 @@ c) La validez y eficacia de las copias realizadas
 d) Los metadatos mínimos exigidos
 correcta: b
 temática: auditoría y ENS (Esquema Nacional de Seguridad)
-
-
-
-
-
+justificación:
 
 16. Las sedes electrónicas, utilizarán para identificarse y garantizar una comunicación  segura con las mismas:
 a) Certificados con firma electrónica
@@ -610,11 +504,7 @@ c) Claves de identificación
 d) Certificados de sitio web
 correcta: b
 temática: protocolos y correo electrónico 
-
-
-
-
-
+justificación:
 
 17. ¿Cuál de los siguientes protocolos no ha sido estandarizado por el World Wide Web Consortium (W3C)?
 a) HTML
@@ -623,9 +513,7 @@ c) CSS
 d) XML
 correcta:  b
 temática: html, xml y css
-
-
-
+justificación:
 
 18. ¿Cuál de las siguientes herramientas del Centro Criptológico Nacional sirve para realizar análisis avanzados
 de ficheros?
@@ -635,9 +523,7 @@ c) ANA
 d) MARTA
 correcta:  d
 temática: criptografia
-
-
-
+justificación:
 
 19. Señale el nombre del principio de accesibilidad de WCAG 2.1 (Web Content Accessibility Guidelines 2.1) que se define como "los componentes de la interfaz de usuario y la navegación debe ser manejable":
 a) Comprensible
@@ -646,9 +532,7 @@ c) Operable
 d) Admisible
 correcta: c
 temática: accesibilidad y Real Decreto 1112/2018 de 7 de septiembre, sobre accesibilidad de los sitios web; la Guía de comunicación digital de la Administración del Estado
-
-
-
+justificación:
 
 20. XML es un lenguaje extensible de marcas. Señale que significa extensible:
 a) No está limitado el tamaño de los ficheros
@@ -657,14 +541,9 @@ c) Se puede modelar datos a cualquier nivel de complejidad
 d) El uso de ficheros se puede extender a cualquier plataforma
 correcta: b
 temática: html, xml y css
+justificación:
 
-
-
-
-
-
-
-
+EXAMEN UCM 2021
 1. Indique cuál de los siguientes comandos en LINUX quita los permisos de lectura y ejecución al grupo y al resto de usuarios del archivo 'coordenadas'
 a) chmod go-rx coordenadas
 b) chmod ugo+rwx coordenadas
@@ -672,7 +551,7 @@ c) chmod 700 coordenadas
 d) chmod 774 coordenadas
 correcta: a
 temática: sistema operativo
-
+justificación:
 
 2. Indique cuál de los siguientes no se cataloga como un comando del sistema de archivos en LINUX
 a) touch
@@ -682,7 +561,6 @@ d) head
 correcta: c
 temática: sistema operativo
 
-
 3. Señale la opción correcta respecto al protocolo UDP
 a) Es un protocolo orientado a la conexión
 b) Garantiza la entrega de los bytes al nivel superior en orden
@@ -690,9 +568,7 @@ c) Su cabecera tiene un tamaño de 8 bytes
 d) El destino envía acuses de recibido o ACKs notificando los paquetes correctamente recibidos
 correcta: c
 temática: modelo OSI y  arquitectura TCP/IP
-
-
-
+justificación:
 
 4. Los niveles superiores del modelo OSI se agrupan dentro del bloque de aplicación mientras que los niveles bajos se agrupan en el
 a) Bloque de compatibilidad de software
@@ -701,9 +577,7 @@ c) Bloque de transmisión
 d) Bloque de multiplexación y detección de errores
 correcta: c
 temática: modelo OSI y  arquitectura TCP/IP
-
-
-
+justificación:
 
 5. Una clave candidata con más de un atributo es una
 a) Superclave
@@ -712,8 +586,7 @@ c) Clave primaria
 d) Ninguna es correcta
 correcta: b
 temática: DNI y firma electrónica
-:
-
+justificación:
 
 6. El mensaje de SMTP que notifica al sistema receptor que la siguiente parte de la comunicación será el cuerpo del mensaje es...
 a) EXPN
@@ -722,10 +595,7 @@ c) SATA
 d) MAIL
 correcta: b
 temática: protocolos y correo electrónico 
-
-
-: 
-
+justificación:
 
 7. ¿Cuál es la tecnología empleada para proporcionar circuitos virtuales en las redes IP?
 a) IGMP
@@ -734,9 +604,7 @@ c) IPV6
 d) MPLS
 correcta: d
 temática: protocolo IP y direcciones IPv4 IPv6
-
-
-
+justificación:
 
 8. ¿Qué es SOHO?
 a) Una red de pequeña oficina o doméstica
@@ -745,7 +613,7 @@ c) Una DMZ con un cortafuego
 d) Una VLAN multi-DMZ
 correcta: a
 temática: redes
-
+justificación:
 
 9. En términos de capacidad de información, ¿qué significa "Palabra" o "Word"?
 a) Agrupación de 8 bits
@@ -754,11 +622,7 @@ c) Agrupación de 32 bits
 d) Agrupación de 64 bits
 correcta: b
 temática: data y Data Warehouse
-
-
-
-
-
+justificación:
 
 10. En un entorno Unix, ¿qué permisos posee el grupo del archivo: drw-rx-r?
 a) Lectura, escritura y ejecución
@@ -767,7 +631,7 @@ c) Lectura y ejecución
 d) Lectura
 correcta: c
 temática: sistema operativo
-
+justificación:
 
 11. ¿Cómo se denomina la técnica utilizada por un atacante para suplantar a otro host, falseando la dirección IP de origen de sus datagramas?
 a) IP Spoofing
@@ -776,9 +640,7 @@ c) DoS
 d) Spyware
 correcta: a
 temática: protocolo IP y direcciones IPv4 IPv6
-
-
-
+justificación:
 
 12. ¿Qué registro de recursos almacena la información de la zona, como el email del administrador en un servidor DNS?
 a) NS
@@ -787,11 +649,7 @@ c) SOA
 d) EMAIL
 correcta: c
 temática: redes
-
-
-
-
-
+justificación:
 
 13. ¿Cuál de los siguientes NO es un método de uso SQL?
 a) SQL embebido
@@ -800,11 +658,7 @@ c) SQL persistente
 d) SQL dinámico
 correcta: c
 temática: bases de datos SQL
-
-
-
-
-
+justificación:
 
 14. ¿Qué elemento de los siguientes es el que permite presentar un documento XML en otros formatos como HTML o PDF?
 a) La hoja de estilo XSL
@@ -813,9 +667,7 @@ c) El OTO (Oocument Type Oefinition)
 d) XSO (Schema)
 correcta: a
 temática: html, xml y css
-
-
-
+justificación:
 
 15. ¿Cómo se denomina el conjunto de protocolos que ofrece encriptación y autentificación a las comunicaciones IP y que está incluido en IPV6?
 a) IPSec
@@ -824,11 +676,7 @@ c) PGP
 d) SSL
 correcta: a
 temática: protocolo IP y direcciones IPv4 IPv6
-
-
-
-
-
+justificación:
 
 17. Para buscar las coincidencias de un patrón dentro de uno o más archivos, ¿qué comando Unix utilizaremos?
 a) grep
@@ -837,7 +685,7 @@ c) find
 d) mount
 correcta: a
 temática: sistema operativo
-
+justificación:
 
 18. A la actuación administrativa producida por un sistema de información adecuadamente programado sin necesidad de intervención de una persona física en cada caso singular se la denomina:
 a) Actuación electrónica
@@ -846,9 +694,7 @@ c) No tiene una denominación específica
 d) Actuación pública automatizada
 correcta: b
 temática: seguridad acceso a la información
-
-
-
+justificación:
 
 19. ¿Cómo se denomina la Autoridad Pública de Certificación Española?
 a) MAGERIT
@@ -857,9 +703,7 @@ c) SSITAD
 d) CSI
 correcta: b
 temática: DNI y firma electrónica
-
-
-
+justificación:
 
 20. ¿Cuál de las siguientes correspondencias no es correcta?
 a) Fast Ethernet - 100 Mbps
@@ -868,18 +712,17 @@ c) Wifi - 54 Mbps
 d) Token Ring- 24 Mbps
 correcta: d
 temática: redes
+justificación:
 
-
-
-
-1. Señale cuál de las siguientes respuestas NO se corresponde con una solución software de CRM (Customer Relationship Management): 
+EXAMEN UCM 2020
+1. Señale cuál de las siguientes respuestas NO se corresponde con una solución software de CRM (Customer Relationship Management):
 a) Siebel CRM
 b) SAGE CRM
 c) Zoho CRM
 d) DCOM CRM
 correcta: d
 temática:  CRM
-
+justificación:
 
 2.Indique cuál es el comité del W3C encargado de promover y estandarizar la accesibilidad Web 
 a) WAI
@@ -888,9 +731,7 @@ c) ATAG
 d) UAAG
 correcta: a
 temática: html, xml y css
-
-
-
+justificación:
 
 3. ¿Cuál de las siguientes respuestas es verdadera respecto a X.500?
  a) X.500 es un protocolo que especifica un modelo para conectar servicios de directorio locales para formar un directorio global distribuido, de forma que el usuario percibe el directorio completo como accesible de su servidor local
@@ -899,20 +740,16 @@ c) X.500 ha sido desarrollado por ANSI para su implementación en el ejército a
 d) X.500 es el protocolo de directorio más extendido, por lo que puede considerarse un estándar de facto, pero aunque se estima próxima su adopción por ISO para incorporarlo a la definición estándar de OSI, aún no se ha dado este paso
 correcta: c
 temática: protocolos y correo electrónico 
+justificación:
 
-
-
-
-4 ¿A qué corresponde el concepto Cross-Site Scripting (XSS)? Una aplicación web que visualiza y funciona correctamente en todos los navegadores. 
+4 ¿A qué corresponde el concepto Cross-Site Scripting (XSS)? Una aplicación web que visualiza y funciona correctamente en todos los navegadores.
 a) Una norma para garantizar que un lenguaje de script funcione en distintos navegadores
 b) Técnica de programación por la que una aplicación web reutiliza el mismo script en múltiples páginas
 c) Un agujero de seguridad típico de aplicaciones web
 d) Un agujero de inseguridad típico de aplicaciones web
 correcta: c
 temática: protocolos y correo electrónico 
-
-
-
+justificación:
 
 5. Si accedemos a un sitio https y recibimos un aviso de que la autoridad de certificación que ha emitido el certificado de servidor no es reconocida por nosotros, y aun así aceptamos establecer comunicación con ese servidor, ¿la comunicación entre cliente y servidor será cifrada? 
 a) No, puesto que el certificado no es válido
@@ -921,11 +758,8 @@ c) No, puesto que, aunque hayamos aceptado ese certificado no podremos utilizarl
 d) Sí, porque al aceptar el cifrado se va a realizar con un certificado de cliente
 correcta: b
 temática: protocolos y correo electrónico 
+justificación:
 
-
-
-
- 
 6. Señale de entre los siguientes, cuál no es un ataque en una red: 
 a) Ping de la muerte
 b) ARP poisoning
@@ -933,7 +767,7 @@ c) Smurf
 d) Snicker
 correcta: d 
 temática: redes 
-
+justificación:
 
 7. En PHP 7, al arrancar el servidor, el fichero de configuración php.ini se busca en primer lugar en: 
 a) La ubicación específica de módulo SAPI
@@ -942,11 +776,7 @@ c) El directorio del servidor
 d) La variable de entorno PHRC
 correcta: a
 temática: lenguajes programación
-
-
-
-
-
+justificación:
 
 8. En seguridad en el nivel de aplicación, el WS-Security es un protocolo de comunicaciones que tiene como objetivo principal:
  a) Describir las distintas capas de seguridad que se pueden poner a un servicio web
@@ -955,11 +785,7 @@ c) Describir el nivel de seguridad de un servicio web
 d) Describir la forma de firmar y de cifrar mensajes de tipo SOAP
 correcta: d
 temática: protocolos y correo electrónico 
-
-
-
-
-
+justificación:
 
 9. En dirección y gestión de proyectos de tecnologías de la información, indicar cuál de las siguientes es una técnica de gestión del cronograma del proyecto: 
 a) Gestión del valor ganado
@@ -968,24 +794,16 @@ c) Diagramas de Pareto
 d) Diagrama de Gantt
 correcta: d
 temática: pruebas de caja, software y hardware
+justificación:
 
-
-
-
-
-
-10. En dirección y gestión de proyectos de tecnologías de la información, indicar cuál de las siguientes es una técnica de gestión del coste del proyecto: 
+10. En dirección y gestión de proyectos de tecnologías de la información, indicar cuál de las siguientes es una técnica de gestión del coste del proyecto:
 a) Análisis de puntos de función
 b) Diagramas de afinidad
 c) PERT
 d) Método del camino crítico
 correcta: a
 temática: pruebas de caja, software y hardware
-
-
-
-
-
+justificación:
 
 11. En auditoría informática, indicar cuáles son los principios que deben cumplirse siempre para que la función de auditoría pueda desarrollarse con éxito:
 a) Accesibilidad y proactividad
@@ -994,13 +812,7 @@ c) Auditoría interna y auditoría externa
 d) Independencia y autoridad
 correcta: d 
 temática: auditoría y ENS (Esquema Nacional de Seguridad)
-
-
-
-
-
-
-
+justificación:
 
 12.En HTML, ¿cuál de los siguientes códigos no sirve para dar formato a un texto?
  a) <b>
@@ -1009,9 +821,7 @@ c) <li>
 d) <del>
 correcta: c
 temática: html, xml y css
-
-
-
+justificación:
 
 13. ¿En qué modelo de prestación de servicios de CLOUD tiene el cliente acceso a la configuración del sistema operativo? 
 a) SAAS
@@ -1020,7 +830,7 @@ c) PAAS
 d) En ninguno
 correcta: b
 temática:  Cloud
-
+justificación:
 
 14. ¿Cuál de las siguientes afirmaciones no se corresponde con HIBERNATE ORM? a) Disponible también para Php con el nombre PHibernate
 b) Es un traductor entre la aplicación y la base de datos realizando un mapeo entre las columnas de una tabla de la base de datos y los atributos de una clase
@@ -1028,9 +838,7 @@ c) Utiliza archivos XML
 d) Es un framework open-source de desarrollo Java
 correcta: a 
 temática: lenguajes programación
-
-
-
+justificación:
 
 15. En la programación con .NET ¿en qué grupo de la biblioteca de clases base se incluye ADO.NET? 
 a) Presentación
@@ -1039,9 +847,7 @@ c) Acceso a datos
 d) System
 correcta: c
 temática: C++, C,  .NET Framework y ASP.NET
-
-
-
+justificación:
 
 16. ¿Cuál de estas características no se corresponden con la tecnología JAVA?
 a) Fuertemente tipado
@@ -1050,11 +856,7 @@ c) Orientado a objetos puro
 d) Débilmente tipado
 correcta: d
 temática: lenguajes programación
-
-
-
-
-
+justificación:
 
 17. Indica cuál de las siguientes características no es correcta para Moodle: 
 a) Desarrollado con lenguaje PHP y motor de base de datos PostgreSQL
@@ -1063,11 +865,7 @@ c) Es una plataforma de aprendizaje virtual, de código abierto y software libre
 d) Permite a los docentes construir cursos en línea como soporte a la docencia presencial o virtual
 correcta: a
 temática: e-learning
-
-
-
-
-
+justificación:
 
 18. En Cloud Computing, ¿qué es la Elasticidad? 
 a) Capacidad de un sistema de crecer y decrecer en potencia para adaptarse a futuras necesidades de demanda
@@ -1076,9 +874,7 @@ c) Capacidad de un sistema de crecer incorporando nuevos nodos físicos a su inf
 d) Capacidad de un sistema de abstraerse de la infraestructura física para ofrecer servicios virtualizados
 correcta: b 
 temática:  Cloud
-
-
-
+justificación:
 
 19. En firma electrónica, ¿qué es el sello electrónico? 
 a) Es el modelo de firma electrónica para las personas jurídicas
@@ -1087,9 +883,7 @@ c) Es el modelo de firma electrónica que permite firmar de forma conjunta un co
 d) Es el modelo de firma electrónica que garantiza la incorporación del sello de tiempo
 correcta: a 
 temática: DNI y firma electrónica
-
-
-
+justificación:
 
 20. En planificación y control de las TIC, en ITIL, ¿cuáles son los pasos del ciclo de Deming o ciclo PDCA? 
 a) Analizar, hacer, revisar, planificar
@@ -1098,3 +892,4 @@ c) Planificar, actuar, revisar
 d) Planificar, revisar, hacer, verificar, optimizar
 correcta: b
 temática: pruebas de caja, software y hardware
+justificación:
