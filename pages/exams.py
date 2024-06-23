@@ -1,145 +1,114 @@
-import os
 import streamlit as st
-import vertexai
-from vertexai.generative_models import (
-    GenerationConfig,
-    GenerativeModel,
-    HarmBlockThreshold,
-    HarmCategory,
-)
 from google.cloud import bigquery
 import pandas as pd
 
-# Configuración del proyecto de Google Cloud
-PROJECT_ID = os.environ.get("GCP_PROJECT")  # Your Google Cloud Project ID
-LOCATION = os.environ.get("GCP_REGION")  # Your Google Cloud Project Region
-vertexai.init(project=PROJECT_ID, location=LOCATION)
-
-@st.cache_resource
-def load_models():
-    text_model_pro = GenerativeModel("gemini-1.0-pro")
-    multimodal_model_pro = GenerativeModel("gemini-1.0-pro-vision")
-    return text_model_pro, multimodal_model_pro
-
-def get_gemini_pro_text_response(model: GenerativeModel, prompt: str, generation_config: GenerationConfig, stream: bool = True):
-    safety_settings = {
-        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-        HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
-        HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-    }
-
-    responses = model.generate_content(
-        prompt,
-        generation_config=generation_config,
-        safety_settings=safety_settings,
-        stream=stream,
-    )
-
-    final_response = []
-    for response in responses:
-        try:
-            final_response.append(response.text)
-        except IndexError:
-            final_response.append("")
-            continue
-    return " ".join(final_response)
-
-def save_to_bigquery(response_text):
-    client = bigquery.Client()
-
-    rows_to_insert = []
-    questions = response_text.split('Pregunta:')
-    for question in questions[1:]:
-        parts = question.split('Respuesta a:')
-        q = parts[0].strip()
-        answers = parts[1].split('Respuesta b:')
-        a = answers[0].strip()
-        answers = answers[1].split('Respuesta c:')
-        b = answers[0].strip()
-        answers = answers[1].split('Respuesta d:')
-        c = answers[0].strip()
-        answers = answers[1].split('Respuesta correcta:')
-        d = answers[0].strip()
-        correct = answers[1].split('Tema:')[0].strip()
-        theme = answers[1].split('Tema:')[1].split('Justificación:')[0].strip()
-        justification = answers[1].split('Justificación:')[1].strip()
-
-        rows_to_insert.append({
-            'question': q,
-            'answer_a': a,
-            'answer_b': b,
-            'answer_c': c,
-            'answer_d': d,
-            'correct_answer': correct,
-            'theme': theme,
-            'justification': justification
-        })
-
-    table_id = "qwiklabs-asl-03-2bf18f19f570.oposiciones_TAI.oposiciones_TAI"
-    errors = client.insert_rows_json(table_id, rows_to_insert)
-    if errors == []:
-        st.success('Las preguntas se han guardado exitosamente en BigQuery.')
-    else:
-        st.error(f'Error al insertar filas en BigQuery: {errors}')
 
 def show():
-    st.title("AI Generated Questions 🤖")
-    text_model_pro, multimodal_model_pro = load_models()
-    st.subheader("Generate questions based on a theme")
+    st.title("Exams Page 📝")
+    st.write("Here you can take various exams.")
 
-    theme = st.selectbox("Select a theme:", ["e-learning 📚", "modelo OSI 🌐", "redes 🖧", "accesibilidad ♿", "Real Decreto 1112/2018 de 7 de septiembre 📜"])
-
-    creativity_level = st.radio(
-        "Select the creativity level:",
-        ["Low 🤔", "High 💡"],
-        key="creativity_level",
-        horizontal=True,
+    # Inyectar CSS personalizado para cambiar el color de los botones de radio
+    st.markdown(
+        """
+        <style>
+        div[role="radiogroup"] > label > div[role="radio"] > div:first-child {
+            background-color: black !important;
+        }
+        div[role="radiogroup"] > label > div[role="radio"] > div:first-child > div {
+            background-color: black !important;
+        }
+        div[role="radiogroup"] > label > div[role="radio"] > div:first-child > div > input[type="radio"]:checked + div {
+            background-color: black !important;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
     )
 
-    if creativity_level == "Low 🤔":
-        config = GenerationConfig(
-            temperature=0.30,
-            max_output_tokens=2048,
-        )
-    else:
-        config = GenerationConfig(
-            temperature=0.8,
-            max_output_tokens=2048,
-        )
 
-    prompt = f"""
-        Write 15 questions on the following theme: \n
-        Theme: {theme} \n
-        Below each question, provide four possible answers with only one correct answer.
-        Below, provide the correct answer.
-        Below, indicate the theme
-        Below, provide a reasoned justification for why it is valid. If you have a reference source, it is better. Do not invent anything; if you do not know the justification, indicate it.
-        For each question, format the output as follows:
-        Pregunta: <question>
-        Respuesta a: <answer_a>
-        Respuesta b: <answer_b>
-        Respuesta c: <answer_c>
-        Respuesta d: <answer_d>
-        Respuesta correcta: <correct_answer>
-        Tema: <theme>
-        Justificación: <justification>
-        Show me everything in Spanish.
-        """
+    # Crea un cliente de BigQuery
+    client = bigquery.Client()
 
-    generate_questions = st.button("Generate Questions", key="generate_questions")
-    if generate_questions and prompt:
-        with st.spinner("Generating your questions using Gemini 1.0 Pro ..."):
-            tab_questions, tab_prompt = st.tabs(["Questions 💬", "Prompt 📝"])
-            with tab_questions:
-                response = get_gemini_pro_text_response(
-                    text_model_pro,
-                    prompt,
-                    generation_config=config,
-                )
-                if response:
-                    st.write("Generated Questions:")
-                    st.write(response)
-                    save_to_bigquery(response)
-            with tab_prompt:
-                st.text(prompt)
+    # Define la consulta
+    query = """
+        SELECT question, answer_a, answer_b, answer_c, answer_d, correct_answer, theme, justification
+        FROM `qwiklabs-asl-03-2bf18f19f570.oposiciones_TAI.oposiciones_TAI`
+    """
+
+    # Ejecuta la consulta
+    query_job = client.query(query)
+    results = query_job.result()
+
+    # Convertir los resultados a una lista de diccionarios
+    rows = [dict(row) for row in results]
+
+    # Convertir la lista de diccionarios a un DataFrame de pandas
+    df = pd.DataFrame(rows)
+
+    # Verificar los nombres de las columnas
+    st.write("Columnas del DataFrame:")
+    st.write(df.columns)
+
+    # Mostrar las primeras filas del DataFrame para ver los datos
+    st.write("Primeras filas del DataFrame:")
+    st.write(df.head())
+
+    # Crear pestañas
+    tab1, tab2 = st.tabs(["Preguntas Aleatorias", "Preguntas por Temática"])
+
+    with tab1:
+        st.header("Preguntas Aleatorias")
+        df_random = df.sample(frac=1).reset_index(drop=True)  # Shuffle the DataFrame
+        show_questions(df_random, "random")
+
+    with tab2:
+        st.header("Preguntas por Temática")
+        theme = st.selectbox("Seleccione una temática:", [
+            "e-learning", "criptografía", "modelo OSI", "redes",
+            "accesibilidad", "Real Decreto 1112/2018 de 7 de septiembre, sobre accesibilidad de los sitios web",
+            "Guía de comunicación digital de la Administración del Estado"
+        ])
+
+        if theme:
+            query_theme = f"""
+                SELECT question, answer_a, answer_b, answer_c, answer_d, correct_answer, theme, justification
+                FROM `qwiklabs-asl-03-2bf18f19f570.oposiciones_TAI.oposiciones_TAI`
+                WHERE theme = '{theme}'
+            """
+            query_job_theme = client.query(query_theme)
+            results_theme = query_job_theme.result()
+            rows_theme = [dict(row) for row in results_theme]
+            df_theme = pd.DataFrame(rows_theme)
+
+            if not df_theme.empty:
+                show_questions(df_theme, "theme")
+            else:
+                st.write("No hay preguntas disponibles para la temática seleccionada.")
+
+
+def show_questions(df, prefix):
+    user_answers = {}
+    for index, row in df.iterrows():
+        st.write(f"**{index + 1}. {row['question']}**")
+        options = {
+            'a': row['answer_a'],
+            'b': row['answer_b'],
+            'c': row['answer_c'],
+            'd': row['answer_d']
+        }
+        user_answers[index] = st.radio("Seleccione una opción:", list(options.keys()), key=f"{prefix}_question_{index}")
+
+    if st.button("Submit", key=f"{prefix}_submit"):
+        correct_count = 0
+        for index, row in df.iterrows():
+            if user_answers[index] == row['correct_answer']:
+                correct_count += 1
+        st.write(f"Has acertado {correct_count} de {len(df)} preguntas.")
+
+        st.write("### Detalle de Respuestas:")
+        for index, row in df.iterrows():
+            st.write(f"**{index + 1}. {row['question']}**")
+            st.write(f"**Tu respuesta:** {user_answers[index]}")
+            st.write(f"**Respuesta correcta:** {row['correct_answer']}")
+            st.write(f"**Justificación:** {row['justification']}")
+            st.write("---")
