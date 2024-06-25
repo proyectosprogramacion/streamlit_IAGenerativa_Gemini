@@ -18,16 +18,15 @@ Para más información sobre el consumo de IA y su impacto ambiental, puedes vis
 ## Uso de la Aplicación 💡
 
 - **Questions 📄**: Muestra preguntas de exámenes oficiales. 
-  - Accede a archivos .txt con preguntas oficiales de exámenes publicados. 
-  - Lee el archivo y muestra las preguntas en el formato indicado.
+  - Accede a questions.txt con preguntas oficiales de exámenes publicados. 
+  - Lee el archivo y muestra las preguntas con las respuestas correctas.
   
       ![Questions Page](Images/questions_page.png)
   
-- **Exams 📝**: Muestra preguntas de exámenes, tanto oficiales como generadas por IA de otros usuarios. Puedes seleccionar una temática concreta.
+- **Exams 📝**: Muestra preguntas de exámenes, tanto oficiales como generadas por IA de otros usuarios. Permite seleccionar por temáticas concretas.
   - Accede a una base de datos de BigQuery.
   - La base de datos tiene el siguiente esquema: question, answer_a, answer_b, answer_c, answer_d, correct_answer, theme, justification. 
-  - Incluye preguntas de exámenes oficiales. 
-  - También se añaden las preguntas generadas por IA en la pestaña "AI Questions" (Esta funcionalidad aún está en desarrollo).
+  - En la base de datos, se incluyen las preguntas de exámenes oficiales y las preguntas generadas por IA en la pestaña "AI Questions" (Esta funcionalidad aún está en desarrollo).
 
     ![Exams Page](Images/exams_page.png)
   
@@ -39,11 +38,11 @@ Para más información sobre el consumo de IA y su impacto ambiental, puedes vis
 
     ![AI Questions](Images/ai_questions.png)
   
-- **AI Chat 🗣️**: Accede a un chat sobre la legislación de la oposición y otros recursos disponibles sobre legislación específica para cada oposición.
-  - Proporciona enlaces para descargar la legislación y los temarios
-  - Accede a un chat automatizado para preguntar sobre la legislación de las convocatorias.
+- **AI Chat 🗣️**: Accede a un chat sobre legislación y recursos disponibles.
+  - Accede a un Agent Build con Gemini para preguntar sobre la legislación de las convocatorias.
+  - Es posible acceder a recursos para descargar legislación y temarios.
   
-    ![AI Chat](Images/ai_chat.png)
+       ![AI Chat](Images/ai_chat.png)
   
 ## Buscar Legislación
 
@@ -59,6 +58,6 @@ Para instalar y ejecutar la aplicación localmente, sigue estos pasos:
 1. Clona este repositorio.
    ```bash
    git clone https://github.com/tu-usuario/tu-repositorio.git
+
 Envía un pull request con tus sugerencias y mejoras.
 
-Sigue las instrucciones adicionales en el repositorio para configurar y ejecutar la aplicación.
