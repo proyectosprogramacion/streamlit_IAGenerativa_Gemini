@@ -20,7 +20,7 @@ def show():
     - **Questions 📄**: Muestra preguntas de exámenes oficiales.
     - **Exams 📝**: Muestra preguntas de exámenes tanto oficiales como generadas por IA por otros usuarios. Puedes seleccionar una temática concreta.
     - **AI Questions 🤖**: Genera preguntas nuevas con IA generativa.
-    - **AI Chat 🗣️**: Permite acceder a un chat sobre la legislación de la oposición, además de recursos disponibles sobre legislación específica para cada oposición.
+    - **AI Chat 🗣️**: Permite acceder a un chat con IA sobre legislación; además de recursos disponibles específicos para cada oposición.
     """)
 
     st.markdown(
