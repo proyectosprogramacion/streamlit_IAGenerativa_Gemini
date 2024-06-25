@@ -40,7 +40,7 @@ Para más información sobre el consumo de IA y su impacto ambiental, puedes vis
     ![AI Questions](Images/ai_questions.png)
   
 - **AI Chat 🗣️**: Accede a un chat sobre la legislación de la oposición y otros recursos disponibles sobre legislación específica para cada oposición.
-  - Proporciona enlaces para descargar la legislación y los temarios.
+  - Proporciona enlaces para descargar la legislación y los temarios
   - Accede a un chat automatizado para preguntar sobre la legislación de las convocatorias.
   
     ![AI Chat](Images/ai_chat.png)
